@@ -31,6 +31,10 @@ dependencies {
 	// LangChain4j
 	implementation("dev.langchain4j:langchain4j-open-ai-spring-boot-starter:1.0.0-beta1")
 	implementation("dev.langchain4j:langchain4j-spring-boot-starter:1.0.0-beta1")
+
+	// Mapstruct
+	implementation ("org.mapstruct:mapstruct:1.6.3")
+	annotationProcessor ("org.mapstruct:mapstruct-processor:1.6.3")
 }
 
 tasks.withType<Test> {
