@@ -35,6 +35,9 @@ dependencies {
 	// Mapstruct
 	implementation ("org.mapstruct:mapstruct:1.6.3")
 	annotationProcessor ("org.mapstruct:mapstruct-processor:1.6.3")
+
+    // Validator
+    implementation ("org.springframework.boot:spring-boot-starter-validation")
 }
 
 tasks.withType<Test> {

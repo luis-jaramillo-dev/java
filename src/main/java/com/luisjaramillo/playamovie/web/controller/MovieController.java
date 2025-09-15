@@ -5,6 +5,7 @@ import com.luisjaramillo.playamovie.domain.dto.SuggestRequestDto;
 import com.luisjaramillo.playamovie.domain.dto.UpdateMovieDto;
 import com.luisjaramillo.playamovie.domain.service.MovieAIService;
 import com.luisjaramillo.playamovie.domain.service.MovieService;
+import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -57,7 +58,7 @@ public class MovieController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<MovieDto> updateMovie(@PathVariable Long id, @RequestBody UpdateMovieDto movieDto) {
+    public ResponseEntity<MovieDto> updateMovie(@PathVariable Long id, @RequestBody  @Valid UpdateMovieDto movieDto) {
         if (movieDto != null) {
             return ResponseEntity.status(HttpStatus.CREATED).body(this.movieService.updateMovie(id, movieDto));
         }
